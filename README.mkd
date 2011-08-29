@@ -1,0 +1,19 @@
+### Prerequisites
+
+MyOpenAL requires two frameworks:
+
+*   OpenAL (/System/Library/Frameworks/OpenAL.framework)
+*   AudioToolbox (/System/Library/Frameworks/AudioToolbox.framework)
+
+### Usage
+
+```c
+// Initializing OpenAL.
+MyOpenAL* myOpenAL = myOpenAL = [[MyOpenAL alloc] init];
+
+// Loading sound file castaned.wav and saving reference.
+NSUInteger sound = [myOpenAL loadSoundFromFile:@"castaned" ext:@"wav" withLoop:false];
+
+// Playing it with given sound level (volume).
+[myOpenAL playSoundWithId:soundOne atVolume:0.75f];
+```
